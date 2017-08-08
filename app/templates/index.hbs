@@ -3,9 +3,18 @@
 <p>We hope you find exactly what you're looking for in a place to stay.</p>
 
 <ul>
+<!-- add rental-tile component: we will render rental-tile component inside the loop -->
+
 {{#each model as |rental|}}
+    {{rental-tile rental=rental destroyRental="destroyRental"}}
+  {{/each}}
+
+  <!-- Here we are passing the variable rental to the component and assigning it value
+ rental - which is individual rental object in the current iterationofthe loop-->
+
+<!-- {{#each model as |rental|}}
   <li>{{rental.owner}}'s {{rental.type}} in {{rental.city}}</li>
-{{/each}}
+{{/each}} -->
 </ul>
 
 {{#link-to 'about'}}About{{/link-to}}
