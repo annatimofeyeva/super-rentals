@@ -6,7 +6,7 @@
 <!-- add rental-tile component: we will render rental-tile component inside the loop -->
 
 {{#each model as |rental|}}
-    {{rental-tile rental=rental destroyRental="destroyRental"}}
+    {{rental-tile rental=rental update="update" destroyRental="destroyRental"}}
   {{/each}}
 
 {{new-rental saveRental2="saveRental3"}}
